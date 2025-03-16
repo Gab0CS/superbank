@@ -45,338 +45,622 @@
 
 @layer utilities {
   .input-class {
-    @apply text-16 placeholder:text-16 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-500;
+    font-size: 16px;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    color: #1f2937;
+    &::placeholder {
+      font-size: 16px;
+      color: #6b7280;
+    }
   }
 
   .sheet-content button {
-    @apply focus:ring-0 focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:border-none !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
   .text14_padding10 {
-    @apply text-14 px-4 py-2.5 font-semibold;
+    font-size: 14px;
+    padding: 0.625rem 1rem;
+    font-weight: 600;
   }
 
   .flex-center {
-    @apply flex items-center justify-center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .header-2 {
-    @apply text-18 font-semibold text-gray-900;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
   }
 
   .text-10 {
-    @apply text-[10px] leading-[14px];
+    font-size: 10px;
+    line-height: 14px;
   }
 
   .text-12 {
-    @apply text-[12px] leading-[16px];
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .text-14 {
-    @apply text-[14px] leading-[20px];
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .text-16 {
-    @apply text-[16px] leading-[24px];
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .text-18 {
-    @apply text-[18px] leading-[22px];
+    font-size: 18px;
+    line-height: 22px;
   }
 
   .text-20 {
-    @apply text-[20px] leading-[24px];
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .text-24 {
-    @apply text-[24px] leading-[30px];
+    font-size: 24px;
+    line-height: 30px;
   }
 
   .text-26 {
-    @apply text-[26px] leading-[32px];
+    font-size: 26px;
+    line-height: 32px;
   }
 
   .text-30 {
-    @apply text-[30px] leading-[38px];
+    font-size: 30px;
+    line-height: 38px;
   }
 
   .text-36 {
-    @apply text-[36px] leading-[44px];
+    font-size: 36px;
+    line-height: 44px;
   }
 
-  /* Home */
   .home {
-    @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
+    overflow-y: scroll;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    max-height: 100vh;
   }
 
   .home-content {
-    @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
+    overflow-y: scroll;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.75rem 1.25rem;
   }
 
   .home-header {
-    @apply flex flex-col justify-between gap-8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
   }
 
   .total-balance {
-    @apply flex w-full items-center gap-4 rounded-xl border border-gray-200 p-4 shadow-chart sm:gap-6 sm:p-6;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   .total-balance-chart {
-    @apply flex size-full max-w-[100px] items-center sm:max-w-[120px];
+    display: flex;
+    width: 100%;
+    max-width: 120px;
+    align-items: center;
   }
 
   .total-balance-label {
-    @apply text-14 font-medium text-gray-600;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
   }
 
   .total-balance-amount {
-    @apply text-24 lg:text-30 flex-1 font-semibold text-gray-900;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2937;
   }
 
   .recent-transactions {
-    @apply flex w-full flex-col gap-6;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .view-all-btn {
-    @apply text-14 rounded-lg border border-gray-300 px-4 py-2.5 font-semibold text-gray-700;
-  }
-
-  .recent-transactions {
-    @apply flex w-full flex-col gap-6;
+    font-size: 14px;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    padding: 0.625rem 1rem;
+    font-weight: 600;
+    color: #374151;
   }
 
   .recent-transactions-label {
-    @apply text-20 md:text-24 font-semibold text-gray-900;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
   }
 
   .recent-transactions-tablist {
-    @apply custom-scrollbar mb-8 flex w-full flex-nowrap;
+    overflow-x: scroll;
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
   }
 
-  /* Right sidebar */
   .right-sidebar {
-    @apply no-scrollbar hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll !important;
+    overflow-y: scroll;
+    display: none;
+    height: 100vh;
+    max-height: 100vh;
+    flex-direction: column;
+    border-left: 1px solid #e5e7eb;
+    width: 355px;
   }
 
   .profile-banner {
-    @apply h-[120px] w-full bg-gradient-mesh bg-cover bg-no-repeat;
+    height: 120px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .profile {
-    @apply relative flex px-6 max-xl:justify-center;
+    display: flex;
+    padding: 1.5rem;
+    justify-content: center;
   }
 
   .profile-img {
-    @apply flex-center absolute -top-8 size-24 rounded-full bg-gray-100 border-8 border-white p-2 shadow-profile;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -2rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    border: 8px solid #ffffff;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .profile-details {
-    @apply flex flex-col pt-24;
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
   }
 
   .profile-name {
-    @apply text-24 font-semibold text-gray-900;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2937;
   }
 
   .profile-email {
-    @apply text-16 font-normal text-gray-600;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6b7280;
   }
 
   .banks {
-    @apply flex flex-col justify-between gap-8 px-6 py-8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
   }
 
-  /* My Banks */
   .my-banks {
-    @apply flex h-screen max-h-screen w-full flex-col gap-8 bg-gray-25 p-8 xl:py-12;
+    display: flex;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #f9fafb;
+    padding: 2rem;
   }
 
-  /* My Banks */
   .transactions {
-    @apply flex max-h-screen w-full flex-col gap-8 overflow-y-scroll bg-gray-25 p-8 xl:py-12;
+    overflow-y: scroll;
+    display: flex;
+    max-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #f9fafb;
+    padding: 2rem;
   }
 
   .transactions-header {
-    @apply flex w-full flex-col items-start justify-between gap-8 md:flex-row;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
   }
 
   .transactions-account {
-    @apply flex flex-col justify-between gap-4 rounded-lg border-y bg-blue-600 px-4 py-5 md:flex-row;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    background-color: #2563eb;
+    padding: 1.25rem;
   }
 
   .transactions-account-balance {
-    @apply flex-center flex-col  gap-2 rounded-md bg-blue-25/20 px-4 py-2 text-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: rgba(37, 99, 235, 0.2);
+    padding: 1rem;
+    color: #ffffff;
   }
 
   .header-box {
-    @apply flex flex-col gap-1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
   .header-box-title {
-    @apply text-24 lg:text-30 font-semibold text-gray-900;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2937;
   }
 
   .header-box-subtext {
-    @apply text-14 lg:text-16 font-normal text-gray-600;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6b7280;
   }
 
-  /* Bank Card */
   .bank-card {
-    @apply relative flex h-[190px] w-full max-w-[320px] justify-between rounded-[20px] border border-white bg-bank-gradient shadow-creditCard backdrop-blur-[6px];
+    position: relative;
+    display: flex;
+    height: 190px;
+    width: 100%;
+    max-width: 320px;
+    justify-content: space-between;
+    border-radius: 1.25rem;
+    border: 1px solid #ffffff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
   }
 
   .bank-card_content {
-    @apply relative z-10 flex size-full max-w-[228px] flex-col justify-between rounded-l-[20px] bg-gray-700 bg-bank-gradient px-5 pb-4 pt-5;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    max-width: 228px;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1.25rem 0 0 1.25rem;
+    background-color: #374151;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.25rem 1.25rem 1rem;
   }
 
   .bank-card_icon {
-    @apply flex size-full flex-1 flex-col items-end justify-between rounded-r-[20px] bg-bank-gradient bg-cover bg-center bg-no-repeat py-5 pr-5;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-radius: 0 1.25rem 1.25rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1.25rem;
   }
 
-  /* Bank Info */
   .bank-info {
-    @apply gap-[18px] flex p-4 transition-all border bg-blue-25 border-transparent;
+    display: flex;
+    gap: 1.125rem;
+    padding: 1rem;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+    background-color: rgba(37, 99, 235, 0.1);
   }
 
-  /* Category Badge */
   .category-badge {
-    @apply flex-center truncate w-fit gap-1 rounded-2xl border-[1.5px] py-[2px] pl-1.5 pr-2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    border-radius: 1.25rem;
+    border: 1.5px solid;
+    padding: 0.125rem 0.375rem;
   }
 
   .banktab-item {
-    @apply gap-[18px] border-b-2 flex px-2 sm:px-4 py-2 transition-all;
+    display: flex;
+    gap: 1.125rem;
+    border-bottom: 2px solid;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
   }
 
-  /* Mobile nav */
   .mobilenav-sheet {
-    @apply flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto;
+    display: flex;
+    height: calc(100vh - 72px);
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
   }
 
   .mobilenav-sheet_close {
-    @apply flex gap-3 items-center p-4 rounded-lg w-full max-w-60;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 15rem;
   }
 
-  /* PlaidLink */
   .plaidlink-primary {
-    @apply text-16 rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form;
+    font-size: 16px;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .plaidlink-ghost {
-    @apply flex cursor-pointer items-center justify-center gap-3 rounded-lg px-3 py-7 hover:bg-white lg:justify-start;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    &:hover {
+      background-color: #ffffff;
+    }
   }
 
   .plaidlink-default {
-    @apply flex !justify-start cursor-pointer gap-3 rounded-lg !bg-transparent flex-row;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    gap: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    flex-direction: row;
   }
 
-  /* Auth */
   .auth-asset {
-    @apply flex h-screen w-full sticky top-0 items-center justify-end bg-sky-1 max-lg:hidden;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #e0f2fe;
   }
 
-  /* Auth Form */
   .auth-form {
-    @apply flex min-h-screen w-full max-w-[420px] flex-col justify-center gap-5 py-10 md:gap-8;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 420px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 2.5rem 0;
   }
 
   .form-item {
-    @apply flex flex-col gap-1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
   }
 
   .form-label {
-    @apply text-14 w-full max-w-[280px] font-medium text-gray-700;
+    font-size: 14px;
+    width: 100%;
+    max-width: 280px;
+    font-weight: 500;
+    color: #374151;
   }
 
   .form-message {
-    @apply text-12 text-red-500;
+    font-size: 12px;
+    color: #ef4444;
   }
 
   .form-btn {
-    @apply text-16 rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form;
+    font-size: 16px;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .form-link {
-    @apply text-14 cursor-pointer font-medium text-bankGradient;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #667eea;
   }
 
-  /* Payment Transfer */
   .payment-transfer {
-    @apply no-scrollbar flex flex-col overflow-y-scroll bg-gray-25 p-8 md:max-h-screen xl:py-12;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9fafb;
+    padding: 2rem;
   }
 
   .payment-transfer_form-item {
-    @apply flex w-full max-w-[850px] flex-col gap-3 md:flex-row lg:gap-8;
+    display: flex;
+    width: 100%;
+    max-width: 850px;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .payment-transfer_form-content {
-    @apply flex w-full max-w-[280px] flex-col gap-2;
+    display: flex;
+    width: 100%;
+    max-width: 280px;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .payment-transfer_form-details {
-    @apply flex flex-col gap-1 border-t border-gray-200 pb-5 pt-6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border-top: 1px solid #e5e7eb;
+    padding: 1.5rem 0;
   }
 
   .payment-transfer_btn-box {
-    @apply mt-5 flex w-full max-w-[850px] gap-3 border-gray-200 py-5;
+    display: flex;
+    width: 100%;
+    max-width: 850px;
+    gap: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+    padding: 1.25rem 0;
   }
 
   .payment-transfer_btn {
-    @apply text-14 w-full bg-bank-gradient font-semibold text-white shadow-form !important;
+    font-size: 14px;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-weight: 600;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* Root Layout */
   .root-layout {
-    @apply flex h-16 items-center justify-between p-5 shadow-creditCard sm:p-8 md:hidden;
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* Bank Info */
   .bank-info_content {
-    @apply flex flex-1 items-center justify-between gap-2 overflow-hidden;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    overflow: hidden;
   }
 
-  /* Footer */
   .footer {
-    @apply flex cursor-pointer items-center justify-between gap-2 py-6;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 1.5rem 0;
   }
 
   .footer_name {
-    @apply flex size-10 items-center justify-center rounded-full bg-gray-200 max-xl:hidden;
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e5e7eb;
   }
 
   .footer_email {
-    @apply flex flex-1 flex-col justify-center max-xl:hidden;
-  }
-
-  .footer_name-mobile {
-    @apply flex size-10 items-center justify-center rounded-full bg-gray-200;
-  }
-
-  .footer_email-mobile {
-    @apply flex flex-1 flex-col justify-center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .footer_image {
-    @apply relative size-5 max-xl:w-full max-xl:flex max-xl:justify-center max-xl:items-center;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
-  .footer_image-mobile {
-    @apply relative size-5;
-  }
-
-  /* Sidebar */
   .sidebar {
-    @apply sticky left-0 top-0 flex h-screen w-fit flex-col  justify-between border-r border-gray-200 bg-white pt-8 text-white max-md:hidden sm:p-4 xl:p-6 2xl:w-[355px];
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    padding-top: 2rem;
+    color: #ffffff;
   }
 
   .sidebar-logo {
-    @apply 2xl:text-26 font-ibm-plex-serif text-[26px] font-bold text-black-1 max-xl:hidden;
+    font-size: 26px;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 700;
+    color: #000000;
   }
 
   .sidebar-link {
-    @apply flex gap-3 items-center py-1 md:p-3 2xl:p-4 rounded-lg justify-center xl:justify-start;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    justify-content: center;
   }
 
   .sidebar-label {
-    @apply text-16 font-semibold text-black-2 max-xl:hidden;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
   }
 }
